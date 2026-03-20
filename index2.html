@@ -1,4 +1,20 @@
-/* Configurações Gerais */
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevLinks</title>
+  </head>
+  <body>
+
+    <style>
+      /* Configurações Gerais */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +22,8 @@
 }
 
 body {
-  background  :url(./assets/bg-desktop.jpg) no-repeat top center;
+ background: #EEAECA;
+background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   font-family: 'Inter', sans-serif; /* Usando a fonte que você importou */
   display: flex;
   justify-content: center;
@@ -16,13 +33,14 @@ body {
 
 @media (max-width: 768px){
   body{
-    background-image: url(./assets/bg-mobile.jpg);
+    background: #EEAECA;
+background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   }
 
 }
 
 #container {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
 
@@ -33,7 +51,7 @@ body {
   padding: 0 24px;
   text-align: center;
 
-  box-shadow: 8px 8px 9px rgb(40, 5, 40);
+  box-shadow: 8px 8px 9px rgb(105, 136, 250);
 }
 
 /* Foto de Perfil */
@@ -89,7 +107,7 @@ body {
   align-items: center;
   justify-content: center;
   
-  background:  rgba(209,0,0, 0.1);
+  background:  rgba(0, 139, 209, 0.1);
   color: white;
   text-decoration: none; /* Remove o sublinhado do link */
   
@@ -105,7 +123,7 @@ body {
 }
 
 .links:hover {
-  background: #A30000; /* Efeito de cor ao passar o mouse */
+  background: #003047; /* Efeito de cor ao passar o mouse */
 
   display: flex;
   align-items: center;
@@ -124,7 +142,7 @@ body {
 }
 
 #botao-tema{
-  background-image: url(brilho-do-sol.png);
+  background-image: url(./assets/sun.svg);
 
   width: 30px;
   height: 30px; 
@@ -146,3 +164,42 @@ body {
     transform:scale(1.05);
     opacity: 0.9;
 }
+    </style>
+    
+    <div id="container">
+
+      <a id="botao-tema" href="index.html"></a>
+
+      <br><br> <br>
+      <div id="profile">
+        <img  id="imagem-maxwellcat" src="assets/avatar.jpg">
+        </div>
+        <p id="texto-perfil">Gamerk325</p>
+      <br>
+     
+      <ul>
+        <div class="links">
+            <a class="links" href="https://github.com/CarlosEduardo568" target="_blank">Me siga!</a>
+        </div>
+ <br>
+          <div class="links">
+
+            <a class="links" href="https://github.com/CarlosEduardo568?tab=repositories" target="_blank">Veja meu portifólio</a>
+          </div>
+
+<br>
+         <div class="links">
+          <a class="links" https://br.linkedin.com/" target="_blank">Acesse meu Linkedin</a>
+         </div>
+
+        <br>
+        <div class="links">
+          <a class="links" download="Curriculo_Adriel">Baixe meu currículo</a>
+        </div>
+
+      </ul>
+
+      <br><br> <br>
+    </div>
+  </body>
+</html>
