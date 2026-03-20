@@ -1,0 +1,148 @@
+/* Configurações Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background  :url(./assets/bg-desktop.jpg) no-repeat top center;
+  font-family: 'Inter', sans-serif; /* Usando a fonte que você importou */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+}
+
+@media (max-width: 768px){
+  body{
+    background-image: url(./assets/bg-mobile.jpg);
+  }
+
+}
+
+#container {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+
+  border-radius: 16px;
+  width: 40%;
+  max-width: 588px;
+  margin: 50px auto;
+  padding: 0 24px;
+  text-align: center;
+
+  box-shadow: 8px 8px 9px rgb(40, 5, 40);
+}
+
+/* Foto de Perfil */
+#profile {
+  width: 112px; /* Reduzi um pouco o tamanho para ficar mais harmônico */
+  height: 112px;
+  background: darkslateblue;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden; /* Garante que a foto não saia do círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imagem-maxwellcat {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+}
+
+#imagem-maxwellcat:hover {
+  background-image: url(./assets/avatar.jpg);
+  height: 150px;
+  width: 150px;
+  object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+  transition: 0.6s ease;
+  transform: rotate(360deg);
+}
+
+#texto-perfil {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+
+#texto-perfil:hover {
+  color: rgb(255, 0, 200);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  transition: 0.7s ease;
+  transform: scale(1.1);
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background:  rgba(209,0,0, 0.1);
+  color: white;
+  text-decoration: none; /* Remove o sublinhado do link */
+  
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.links:hover {
+  background: #A30000; /* Efeito de cor ao passar o mouse */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  margin: 0 auto;
+
+   border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.5s ease;
+  transform:scale(1.05);
+}
+
+#botao-tema{
+  background-image: url(./assets/sun.svg);
+
+  width: 30px;
+  height: 30px; 
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  display: block;
+  margin-top: 20px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+#botao-tema:hover{
+    transform:scale(1.05);
+    opacity: 0.9;
+}
