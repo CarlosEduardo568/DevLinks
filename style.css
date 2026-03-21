@@ -6,7 +6,12 @@
 }
 
 body {
-  background  :url(./assets/bg-desktop.jpg) no-repeat top center;
+  background  :url(./assets/bg-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
   font-family: 'Inter', sans-serif; /* Usando a fonte que você importou */
   display: flex;
   justify-content: center;
@@ -17,6 +22,12 @@ body {
 @media (max-width: 768px){
   body{
     background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
   }
 
 }
@@ -34,6 +45,16 @@ body {
   text-align: center;
 
   box-shadow: 8px 8px 9px rgb(40, 5, 40);
+}
+
+/* medidas para mobile*/
+@media (max-width: 768px){
+  #container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 15px;
+  }
 }
 
 /* Foto de Perfil */
@@ -66,7 +87,7 @@ body {
 
 #texto-perfil {
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   margin-top: 8px;
   margin-bottom: 24px;
@@ -74,8 +95,14 @@ body {
 
 
 #texto-perfil:hover {
-  color: rgb(255, 0, 200);
-  font-size: 16px;
+  background: #833AB4;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 20px;
   font-weight: 500;
   margin-top: 8px;
   margin-bottom: 24px;
@@ -124,7 +151,7 @@ body {
 }
 
 #botao-tema{
-  background-image: url(brilho-do-sol.png);
+  background-image: url(./assets/lua.png);
 
   width: 30px;
   height: 30px; 

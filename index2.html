@@ -9,161 +9,138 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>DevLinks</title>
   </head>
   <body>
 
     <style>
       /* Configurações Gerais */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
- background: #EEAECA;
-background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  font-family: 'Inter', sans-serif; /* Usando a fonte que você importou */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; 
-}
+      body {
+        background: #EEAECA;
+        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 
-@media (max-width: 768px){
-  body{
-    background: #EEAECA;
-background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  }
+        font-family: 'Inter', sans-serif; /* Usando a fonte que você importou */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; 
+      }
 
-}
+      @media (max-width: 768px){
+        body{
+          background: #EEAECA;
+        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        }
 
-#container {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
+      }
 
-  border-radius: 16px;
-  width: 40%;
-  max-width: 588px;
-  margin: 50px auto;
-  padding: 0 24px;
-  text-align: center;
+      #container {
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
 
-  box-shadow: 8px 8px 9px rgb(105, 136, 250);
-}
+        border-radius: 16px;
+        width: 40%;
+        max-width: 588px;
+        margin: 50px auto;
+        padding: 0 24px;
+        text-align: center;
 
-/* Foto de Perfil */
-#profile {
-  width: 112px; /* Reduzi um pouco o tamanho para ficar mais harmônico */
-  height: 112px;
-  background: darkslateblue;
-  border-radius: 50%;
-  margin: 0 auto;
-  overflow: hidden; /* Garante que a foto não saia do círculo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        box-shadow: 8px 8px 9px rgb(105, 136, 250);
+      }
 
-#imagem-maxwellcat {
-  height: 100%;
-  width: 100%;
-  object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
-}
+      /* medidas para mobile*/
+      @media (max-width: 768px){
+        #container{
+          display: flex;
+          flex-direction: column;
+          width: 60%;
+          padding: 15px;
+        }
+        }
 
-#imagem-maxwellcat:hover {
-  background-image: url(./assets/avatar.jpg);
-  height: 150px;
-  width: 150px;
-  object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
-  transition: 0.6s ease;
-  transform: rotate(360deg);
-}
+        .links {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          background:  rgba(0, 139, 209, 0.1);
+          color: white;
+          text-decoration: none; /* Remove o sublinhado do link */
+          
+          width: 100%;
+          max-width: 300px;
+          height: 50px;
+          margin: 0 auto;
+          
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: 500;
+          transition: background 0.2s;
+        }
 
-#texto-perfil {
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 8px;
-  margin-bottom: 24px;
-}
+        .links:hover {
+          background: #003047; /* Efeito de cor ao passar o mouse */
 
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-#texto-perfil:hover {
-  color: rgb(255, 0, 200);
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 8px;
-  margin-bottom: 24px;
-  transition: 0.7s ease;
-  transform: scale(1.1);
-}
+          width: 100%;
+          max-width: 300px;
+          height: 50px;
+          margin: 0 auto;
 
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: 500;
+          transition: 0.5s ease;
+          transform:scale(1.05);
+        }
 
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  background:  rgba(0, 139, 209, 0.1);
-  color: white;
-  text-decoration: none; /* Remove o sublinhado do link */
-  
-  width: 100%;
-  max-width: 300px;
-  height: 50px;
-  margin: 0 auto;
-  
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  transition: background 0.2s;
-}
+        #botao-tema{
+          background-image: url(./assets/sun.svg);
 
-.links:hover {
-  background: #003047; /* Efeito de cor ao passar o mouse */
+          width: 30px;
+          height: 30px; 
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+          background-size: cover;
+          background-position: center;
 
-  width: 100%;
-  max-width: 300px;
-  height: 50px;
-  margin: 0 auto;
+          border-radius: 30px;
+          border: none;
+          cursor: pointer;
 
-   border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  transition: 0.5s ease;
-  transform:scale(1.05);
-}
+          display: block;
+          margin-top: 20px;
+          margin-right: 0;
+          margin-left: auto;
+        }
 
-#botao-tema{
-  background-image: url(./assets/sun.svg);
+        #botao-tema:hover{
+            transform:scale(1.05);
+            opacity: 0.9;
+          
+        }
 
-  width: 30px;
-  height: 30px; 
+        #texto-perfil:hover{
+          background: #fc0015;
+          background: linear-gradient(90deg, rgba(252, 0, 21, 1) 0%, rgba(68, 0, 255, 1) 53%, rgba(0, 140, 247, 1) 100%);
 
-  background-size: cover;
-  background-position: center;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
 
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
+          font-size: 20px;
+          font-weight: 500;
+          margin-top: 8px;
+          margin-bottom: 24px;
+          transition: 0.7s ease;
+          transform: scale(1.1);
 
-  display: block;
-  margin-top: 20px;
-  margin-right: 0;
-  margin-left: auto;
-}
-
-#botao-tema:hover{
-    transform:scale(1.05);
-    opacity: 0.9;
-}
+        }
     </style>
     
     <div id="container">
@@ -189,7 +166,7 @@ background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 23
 
 <br>
          <div class="links">
-          <a class="links" https://br.linkedin.com/" target="_blank">Acesse meu Linkedin</a>
+          <a class="links" href="https://br.linkedin.com/" target="_blank">Acesse meu Linkedin</a>
          </div>
 
         <br>
